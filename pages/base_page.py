@@ -13,7 +13,7 @@ class BasePage:
     def find_element_with_wait(self, locator):
         self.wait.until(
             EC.visibility_of_element_located(locator))
-        return self.driver_element(*locator)
+        return self.driver.find_element(*locator)
     
     def click_to_element(self, some):
         self.wait.until(
@@ -40,3 +40,9 @@ class BasePage:
     def swith_to_another_window(self):
         windows_list = self.driver.window_handles
         self.driver.swith_to_window(windows_list[-1])
+    
+    def scroll_to_element(self, locator):
+        # Находим элемент по локатору
+        element = self.driver.find_element(*locator)
+        # Скроллим до него с помощью JavaScript
+        self.driver.execute_script("arguments[0].scrollIntoView();", element)

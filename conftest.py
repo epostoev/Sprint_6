@@ -12,6 +12,6 @@ def driver():
 
 @pytest.fixture
 def main_page(driver):
-    page = main_page(driver)
+    page = MainPage(driver)
     page.timeout = 10
     return page

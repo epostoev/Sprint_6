@@ -1,5 +1,5 @@
 import allure
-from base_page import BasePage
+from pages.base_page import BasePage
 from locators.main_page_locator import MainPageLocators
 
 class MainPage(BasePage):
@@ -8,7 +8,8 @@ class MainPage(BasePage):
     def click_to_question(self, num):
         locator_q_formatted = self.format_locators(
             MainPageLocators.QUESTION_LOCATORS, num)
-        self.scroll_to_element(MainPageLocators.QUESTION_LOCATORS_TO_SCROLL)
+        # self.scroll_to_element(MainPageLocators.QUESTION_LOCATORS_TO_SCROLL)
+        self.scroll_to_element(locator_q_formatted)
         self.click_to_element(locator_q_formatted)
 
     @allure.step('Получение ответа на вопрос')
@@ -21,4 +22,5 @@ class MainPage(BasePage):
     def check_answer(self, num, my_text):
         self.click_to_question(num)
         text = self.get_answer_text(num)
+        # input(f"\n{text}") !!!! Удалить
         return text == my_text
