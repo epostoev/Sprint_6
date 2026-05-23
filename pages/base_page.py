@@ -1,5 +1,6 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import allure
 
 class BasePage:
     def __init__(self, driver):
@@ -15,6 +16,7 @@ class BasePage:
             EC.visibility_of_element_located(locator))
         return self.driver.find_element(*locator)
     
+    @allure.step("Кликаем по элементу")
     def click_to_element(self, some):
         self.wait.until(
             EC.element_to_be_clickable(some))
@@ -39,10 +41,9 @@ class BasePage:
     
     def swith_to_another_window(self):
         windows_list = self.driver.window_handles
-        self.driver.swith_to_window(windows_list[-1])
+        self.driver.switch_to.window(windows_list[-1])
     
+    @allure.step("Прокручиваем страницу до элемента")
     def scroll_to_element(self, locator):
-        # Находим элемент по локатору
         element = self.driver.find_element(*locator)
-        # Скроллим до него с помощью JavaScript
         self.driver.execute_script("arguments[0].scrollIntoView();", element)

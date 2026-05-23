@@ -6,3 +6,5 @@ class OrderPageLocator:
     FIELD_ADDRESS = (By.XPATH, ".//div[contains(@class, 'Order_Form')]//input[@placeholder = '* Адрес: куда привезти заказ']")
     FIELD_SUBWAY = (By.XPATH, ".//div[contains(@class, 'Order_Form')]//input[@placeholder = '* Станция метро']")
     FIELD_PHONE = (By.XPATH, ".//div[contains(@class, 'Order_Form')]//input[@placeholder = '* Телефон: на него позвонит курьер']")
+    NEXT_BUTTON = (By.XPATH, ".//div[contains(@class, 'Order_NextButton')]//button")
+    SELECT_ITEM_IN_DROPDOWN_METRO = (By.XPATH, ".//ul[@class='select-search__options']//div[text()='{}']")

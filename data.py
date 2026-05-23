@@ -12,11 +12,18 @@ class TestData:
 class TestData_ORDER_PAGE:
     ORDER_DATA_1 = {
         "name" : "Иван",
-        "second_name" : "Иванов"
-    }
+        "second_name" : "Иванов",
+        "address" : "Цюрупы 51",
+        "subway" : "Новогиреево",
+        "phone" : "87777777777"
+     }
     ORDER_DATA_2 = {
         "name" : "Боря",
-        "second_name" : "Гнятюк"
+        "second_name" : "Гнятюк",
+        "address" : "Ковалева 19",
+        "subway" : "Первомайская",
+        "phone" : "+79999999999"
+
     }
 
 class URLS:
