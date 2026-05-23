@@ -9,6 +9,15 @@ class TestData:
         "Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои.",
         "Да, обязательно. Всем самокатов! И Москве, и Московской области."
 ]
+class TestData_ORDER_PAGE:
+    ORDER_DATA_1 = {
+        "name" : "Иван",
+        "second_name" : "Иванов"
+    }
+    ORDER_DATA_2 = {
+        "name" : "Боря",
+        "second_name" : "Гнятюк"
+    }
 
 class URLS:
     BASE_URL = "https://qa-scooter.education-services.ru/"
