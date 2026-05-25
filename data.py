@@ -15,14 +15,16 @@ class TestData_ORDER_PAGE:
         "second_name" : "Иванов",
         "address" : "Цюрупы 51",
         "subway" : "Новогиреево",
-        "phone" : "87777777777"
+        "phone" : "87777777777",
+        "date" : "27.05.2026"
      }
     ORDER_DATA_2 = {
         "name" : "Боря",
         "second_name" : "Гнятюк",
         "address" : "Ковалева 19",
         "subway" : "Первомайская",
-        "phone" : "+79999999999"
+        "phone" : "+79999999999",
+        "date" : "28.05.2026"
 
     }
 

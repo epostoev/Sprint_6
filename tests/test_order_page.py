@@ -23,5 +23,6 @@ class TestOrderPage:
         order_page.scroll_to_element(locator)
         order_page.click_to_element(locator)
         order_page.set_first_page_info(order_data)
+        order_page.set_second_page_info(order_data)
         input()
         assert True
