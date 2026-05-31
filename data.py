@@ -16,7 +16,8 @@ class TestData_ORDER_PAGE:
         "address" : "Цюрупы 51",
         "subway" : "Новогиреево",
         "phone" : "87777777777",
-        "date" : "27.05.2026"
+        "date" : "27.05.2026",
+        "comment" : "Позвонить за 20 минут до приезда"
      }
     ORDER_DATA_2 = {
         "name" : "Боря",
@@ -24,7 +25,8 @@ class TestData_ORDER_PAGE:
         "address" : "Ковалева 19",
         "subway" : "Первомайская",
         "phone" : "+79999999999",
-        "date" : "28.05.2026"
+        "date" : "28.05.2026",
+        "comment" : "Что бы был не сломанный"
 
     }
 

@@ -39,6 +39,17 @@ class OrderPage(BasePage):
         self.scroll_to_element(OrderPageLocator.FIELD_RENT_PERIOD)
         self.click_to_element(OrderPageLocator.FIELD_RENT_PERIOD)
         self.click_to_element(OrderPageLocator.DROPDOWN_ITEM_RENTAL_PERIOD)
+        self.scroll_to_element(OrderPageLocator.CHECKBOX_BLACK_COLOR_SAMOKAT)
+        self.click_to_element(OrderPageLocator.CHECKBOX_BLACK_COLOR_SAMOKAT)
+        self.scroll_to_element(OrderPageLocator.FIELD_COMMENTS)
+        self.click_to_element(OrderPageLocator.FIELD_COMMENTS)
+        self.add_text_to_element(OrderPageLocator.FIELD_COMMENTS, data["comment"])
+        self.scroll_to_element(OrderPageLocator.BUTTON_ORDER)
+        self.click_to_element(OrderPageLocator.BUTTON_ORDER)
+        self.scroll_to_element(OrderPageLocator.BUTTON_CONFIM_ORDER)
+        self.click_to_element(OrderPageLocator.BUTTON_CONFIM_ORDER)
 
-
-
+    @allure.step("Проверить отображение кнопки ""Посмотреть статус"" после создания заказа")
+    def check_displaying_of_button_check_status_of_order(self):
+        element = self.find_element_with_wait(OrderPageLocator.BUTTON_CHECK_STATUS_OF_ORDER)
+        return element.is_displayed()

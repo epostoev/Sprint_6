@@ -7,7 +7,6 @@ from pages.order_page import OrderPage
 @pytest.fixture
 def driver():
     driver = webdriver.Firefox()
-    print("\n1")
     driver.get(URLS.BASE_URL)
     yield driver
     driver.quit()
@@ -20,6 +19,5 @@ def main_page(driver):
 
 @pytest.fixture
 def order_page(driver):
-    print("\n2")
     page = OrderPage(driver)
     return page
