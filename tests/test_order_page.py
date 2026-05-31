@@ -1,11 +1,7 @@
 import allure
 import pytest
 from data import URLS, TestData, TestData_ORDER_PAGE
-from pages.base_page import BasePage
-from pages.order_page import OrderPage
-
 from locators.main_page_locator import MainPageLocators
-from locators.order_page_locator import OrderPageLocator
 
 
 @allure.suite('Тесты оформления заказа')
@@ -24,4 +20,5 @@ class TestOrderPage:
         order_page.click_to_element(locator)
         order_page.set_first_page_info(order_data)
         order_page.set_second_page_info(order_data)
-        assert order_page.check_displaying_of_button_check_status_of_order(), "Окно успешного заказа не появилось"
+        assert order_page.check_displaying_of_button_check_status_of_order(
+        ), "Окно успешного заказа не появилось"

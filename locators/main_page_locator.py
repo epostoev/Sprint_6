@@ -3,6 +3,10 @@ from selenium.webdriver.common.by import By
 
 class MainPageLocators:
 
+    #Лого в шапке
+    LOGO_YANDEX = (By.XPATH, "//a[contains(@class, 'LogoYandex')]")
+    LOGO_SAMOKAT = (By.XPATH, "//a[contains(@class, 'LogoScooter')]")
+
     # Кнопки на главной странице
     ORDER_BUTTON_UP = (
         By.XPATH,

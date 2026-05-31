@@ -9,7 +9,10 @@ fix:
 	python3 -m autopep8 --in-place --aggressive --aggressive $(FILE_1)
 
 test:
-	pytest -v -s $(FILE_1)
+	pytest -v -s $(FILE_1) --alluredir=report
+
+report:
+	allure serve report
 
 cov:
 	pytest --cov=main

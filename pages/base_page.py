@@ -38,10 +38,22 @@ class BasePage:
         locator = locator.format(num)
 
         return method, locator
+
+    @allure.step("Ждём открытия новой вкладки")
+    def wait_for_new_window(self, expected_count):
+        WebDriverWait(self.driver, 10).until(
+        EC.number_of_windows_to_be(expected_count))
     
-    def swith_to_another_window(self):
+    @allure.step("Переключаемся на новую вкладку")
+    def switch_to_another_window(self):
         windows_list = self.driver.window_handles
         self.driver.switch_to.window(windows_list[-1])
+
+    @allure.step("Ждём редирект на {url_part}")
+    def wait_for_url_contains(self, url_part):
+        WebDriverWait(self.driver, 15).until(
+        EC.url_contains(url_part)
+    )
     
     @allure.step("Прокручиваем страницу до элемента")
     def scroll_to_element(self, locator):
