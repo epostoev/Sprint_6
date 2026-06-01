@@ -35,3 +35,13 @@ class MainPage(BasePage):
     def wait_visibility_of_header_logo_yandex(self):
         self.find_element_with_wait(MainPageLocators.LOGO_SAMOKAT)
         self.scroll_to_element(MainPageLocators.LOGO_SAMOKAT)
+
+    @allure.step("Кликнуть на логотип Яндекса")
+    def click_logo_yandex(self):
+        self.wait_visibility_of_header_logo_yandex()
+        self.click_to_element(MainPageLocators.LOGO_YANDEX)
+
+    @allure.step("Кликнуть на логотип Самоката")
+    def click_logo_samocat(self):
+        self.wait_visibility_of_header_logo_yandex()
+        self.click_to_element(MainPageLocators.LOGO_SAMOKAT)
