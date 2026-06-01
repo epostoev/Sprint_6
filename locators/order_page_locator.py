@@ -49,8 +49,7 @@ class OrderPageLocator:
     )
     BUTTON_ORDER = (
         By.XPATH,
-        ".//div[contains (@class, 'Order_Button')]//button[text() = 'Заказать']"
-    )
+        ".//div[contains (@class, 'Order_Button')]//button[text() = 'Заказать']")
     BUTTON_CONFIM_ORDER = (
         By.XPATH,
         "//div[contains(@class, 'Order_Button')]//button[text() = 'Да']"

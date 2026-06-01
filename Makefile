@@ -1,6 +1,8 @@
-FILE_1 = $(shell find ./tests -name "*.py" -type f)
-# FILE_2 = $(shell find ./locators -name "*.py" -type f)
-# FILE_3 = ./tests/test_main_page.py
+# FILE_1 = $(shell find ./tests -name "*.py" -type f)
+# FILE_1 = $(shell find ./locators -name "*.py" -type f)
+# FILE_1 = $(shell find ./pages -name "*.py" -type f)
+# FILE_1 = data.py
+FILE_1 = conftest.py
 
 lint:
 	python3 -m flake8 $(FILE_1)
